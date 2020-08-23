@@ -17,9 +17,9 @@ forecast_col = 'Adj. Close'
 
 df.fillna(-99999, inplace = True)
 
-forecast_out = int(math.ceil(0.1 * len(df))) #finding 10% of the days
+forecast_out = int(math.ceil(0.01 * len(df))) #finding 1% of the days
 
-df['label'] = df[forecast_col].shift(-forecast_out) #shift changes the position of rows down, negative value will take the rows up. Basically we want to see what was the value of adj. close after 10% of the days for the given features.
+df['label'] = df[forecast_col].shift(-forecast_out) #shift changes the position of rows down, negative value will take the rows up. Basically we want to see what was the value of adj. close after 1% of the days for the given features.
 
 
 
