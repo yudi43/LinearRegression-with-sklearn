@@ -35,4 +35,8 @@ X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_
 clf = LinearRegression()
 clf.fit(X_train, y_train)
 
-clf.score(X_test, y_test) 
+accuracy = clf.score(X_test, y_test) 
+
+print(accuracy)  # when tested it gave 94.5% for me.
+
+
